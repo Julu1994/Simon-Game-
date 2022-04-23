@@ -33,12 +33,6 @@ function checkAnswer(currentLevel) {
             }, 1000);
         }
     } else {
-        // playSound("wrong")
-        // $(".mainDiv").addClass("gameOver");
-        // setTimeout(function () {
-        //     $(".mainDiv").removeClass("gameOver")
-        // }, 200);
-        // $("h1").text("Game Over Press Any to start again");
         gameOver();
         sartOver();
         
@@ -86,7 +80,7 @@ function gameOver() {
     }, 200);
     var music = new Audio("sounds/wrong.mp3");
     music.play();
-    $("h1").text("Game Over Didar Dumbo! Press Any Key to start again");
+    $("h1").text("Game Over! Press Any Key to start again");
     sartOver();
 }
 

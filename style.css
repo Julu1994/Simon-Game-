@@ -1,5 +1,5 @@
 .mainDiv{
-    background-color: #B8860B;
+    background: linear-gradient(120deg,  rgb(116, 36, 161),  rgb(188, 228, 240));
     text-align: center;
     margin: 0x;
     padding-bottom: 300px;
@@ -7,11 +7,12 @@
 }
 body{
     margin: 0%;
+
 }
 
 h1{
 font-family: cursive;
-color: cornsilk;
+color: rgb(251, 245, 255);
 font-size: 60px;
 margin: 0;
 padding-bottom: 50px;
@@ -20,23 +21,24 @@ padding-bottom: 50px;
     width: 200px;
     height: 200px;
     border-radius: 10%;
-    border: 10px solid black ;
+    box-shadow: 0 20px 20px #1c1c1d,  0 10px 10px  #121213;
     margin: 10px;
     
 }
 
 .red{
-    background-color: crimson;
+    background-color: rgb(161, 23, 50);
+    
 }
 .green{
-    background-color: greenyellow;
+    background-color: rgb(53, 185, 13);
 }
 .blue{
-    background-color: blueviolet;
+    background-color: rgb(3, 127, 184);
 }
 
 .white{
-    background-color: cornsilk;
+    background-color: rgb(198, 203, 206);
 }
 .pressed{
     background-color: gray;
@@ -52,11 +54,27 @@ padding-bottom: 50px;
 
 #footer{
     text-align: center;
-    padding: 50px 0 ;
+    padding: 10px 0 ;
     background-color: bisque;
 }
 
 .si{
     margin: 10px 10px;
     padding-bottom: 10px;
+}
+.red:hover{
+    background-color: rgb(216, 35, 65);
+    cursor: pointer;
+}
+.green:hover{
+    background-color: rgb(51, 240, 34);
+    cursor: pointer;
+}
+.blue:hover{
+    background-color: rgb(15, 159, 216);
+    cursor: pointer;
+}
+.white:hover{
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
 }
