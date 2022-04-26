@@ -1,5 +1,5 @@
 var buttonColores = ["red", "green", "blue", "white"]
-var gamePattern = [];
+var PlayPattern = [];
 var userClickedPattern = [];
 var level = 0;
 var started = false;
@@ -15,19 +15,17 @@ $(document).keypress(function () {
 
 
 $(".btn").click(function () {
-    var userChosenColour = $(this).attr("id");
-    userClickedPattern.push(userChosenColour);
-    playSound(userChosenColour);
-    animatePress(userChosenColour);
+    var userClickedColor = $(this).attr("id");
+    userClickedPattern.push(userClickedColor);
+    playSound(userClickedColor);
+    animatePress(userClickedColor);
     checkAnswer(userClickedPattern.length - 1);
 
 });
 
 function checkAnswer(currentLevel) {
-    if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
-        console.log(gamePattern);
-        console.log(userClickedPattern);
-        if (userClickedPattern.length === gamePattern.length) {
+    if (PlayPattern[currentLevel] === userClickedPattern[currentLevel]) {
+        if (userClickedPattern.length === PlayPattern.length) {
             setTimeout(function () {
                 nextSequence();
             }, 1000);
@@ -51,7 +49,7 @@ function nextSequence() {
     $("h1").text("Level " + level);
     var randomNumber = Math.floor(Math.random() * 4);
     var randomChosenColour = buttonColores[randomNumber];
-    gamePattern.push(randomChosenColour);
+    PlayPattern.push(randomChosenColour);
 
     $("." + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
     playSound(randomChosenColour);
@@ -88,6 +86,6 @@ function sartOver() {
 
     level = 0;
     started = false;
-    gamePattern = [];
+    PlayPattern = [];
 
 }
